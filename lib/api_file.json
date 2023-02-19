@@ -1,0 +1,295 @@
+{
+    "status": "success",
+    "slider": [
+        {
+            "id": "0",
+            "gameurl": "https://poki.com/en/g/subway-surfers#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/584bae3da91feb104678e9c2a78d47c3.jpeg",
+            "gamename": "Subway Surfers",
+            "gamedes": "Subway Surfers is a classic endless runner game. You play as Jake, who surfs the subways and tries to escape from the grumpy Inspector and his dog."
+        },
+        {
+            "id": "1",
+            "gameurl": "https://poki.com/en/g/venge-io#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/41e1eb2b214fcebb66ddcb924e936f96.png",
+            "gamename": "Venge",
+            "gamedes": "Venge.io is an online multiplayer First-Person Shooter game. It is a fast-paced shooter with an engaged and competitive community. There are four standard game modes and maps and countless custom maps/game modes."
+        },
+        {
+            "id": "2",
+            "gameurl": "https://poki.com/en/g/monkey-mart#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/b3668d7deb043d0f43b5813b0365be8f.png",
+            "gamename": "Monkey Mart",
+            "gamedes": "Monkey Mart is an idle/management game made by TinyDobbins. You control a cute monkey character that just created their supermarket."
+        },
+        {
+            "id": "3",
+            "gameurl": "https://poki.com/en/g/sushi-party-io#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/e327f46027899af3e9573ef51450bb54.png",
+            "gamename": "Sushi Party",
+            "gamedes": "Sushi Party is a snake game in Kawaii-style. You are in an arena with other snakes and the goal is to make them bump into you."
+        },
+        {
+            "id": "4",
+            "gameurl": "https://poki.com/en/g/temple-run-2-holi-festival#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/b897d1356f5270be2ba5a3f392aaa4d1.png",
+            "gamename": "Temple Run 2: Holi Festival",
+            "gamedes": "Temple Run 2: Holi Festival is an endless runner game developed by Imangi. Celebrate the Holi Festival in the reimagined colorful temples in Temple Run 2"
+        }
+    ],
+    "suggested": [
+        {
+            "id": "0",
+            "gameurl": "https://poki.com/en/g/venge-io#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/41e1eb2b214fcebb66ddcb924e936f96.png",
+            "gamename": "Venge",
+            "gamedes": "Venge.io is an online multiplayer First-Person Shooter game. It is a fast-paced shooter with an engaged and competitive community."
+        },
+        {
+            "id": "1",
+            "gameurl": "https://poki.com/en/g/shape-fold-html5#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/f200da6eee6516670ed2dda7c65e7891.png",
+            "gamename": "Shape Fold",
+            "gamedes": "Shape Fold is a puzzle game created by Bikas. Shape Fold offers a fresh and unique spin on the classic jigsaw puzzle genre."
+        },
+        {
+            "id": "2",
+            "gameurl": "https://poki.com/en/g/murder#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=94,height=94,fit=cover,f=auto/baccf9660bfb476fe2c8ae9f5a2ec4d2.png",
+            "gamename": "Murder",
+            "gamedes": "Murder is a fun assasination game created by Studio Seufz. Creep up behind the king and take him out quickly and quietly. Be careful – if he catches you, it’s off to the dungeon with you!"
+        },
+        {
+            "id": "3",
+            "gameurl": "https://poki.com/en/g/tiny-fishing#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/c8cb366d52fc2a67fb313c344efdbc9e.png",
+            "gamename": "Tiny Fishing",
+            "gamedes": "Tiny Fishing is a fishing game where you have to upgrade your gear to get bigger fish! Each fish you catch will earn you some money."
+        },
+        {
+            "id": "4",
+            "gameurl": "https://poki.com/en/g/yohoho-io#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/9b373b5219cd66a82389d81d7cda8e23.jpeg",
+            "gamename": "YoHoHo",
+            "gamedes": "YoHoHo Matey! In this game you are a pirate and you have had a shipwreck. You stranded on a desolate island with the other pirates that were on board."
+        },
+        {
+            "id": "5",
+            "gameurl": "https://poki.com/en/g/gold-digger-frvr#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/ada621ee3a066ab12be8484017fd6297.png",
+            "gamename": "Gold Digger FRVR",
+            "gamedes": "Gold Digger FRVR is a 2D adventure game by FRVR Games. You are a miner with a shovel and you are discovering the underground world."
+        },
+        {
+            "id": "6",
+            "gameurl": "https://poki.com/en/g/retro-bowl#fullscreen",
+            "gameimage": "https://www.operationsports.com/wp-content/uploads/2022/02/cover.png",
+            "gamename": "Retro Bowl",
+            "gamedes": "Retro Bowl is an American style football game created by New Star Games. Are you ready to manage your dream team into victory? Be the boss of your NFL franchise."
+        },
+        {
+            "id": "7",
+            "gameurl": "https://poki.com/en/g/like-a-king#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/f0cd739414e134d667d7025aafaedb35.png",
+            "gamename": "Like a King",
+            "gamedes": "Like a King is a tower defense and deck-building game created by LAK Games. You are a king who must battle other kings using and combining the units in your collection of cards."
+        },
+        {
+            "id": "8",
+            "gameurl": "https://poki.com/en/g/who-is#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/373740bfb89dd3e6c1fb96674148e806.png",
+            "gamename": "Who Is?",
+            "gamedes": "Who Is? is a puzzle game created by Unico Studio. This is a fun riddle game that presents you with over a hundred tricky scenarios and you have to think outside the box to solve them."
+        },
+        {
+            "id": "9",
+            "gameurl": "https://poki.com/en/g/stick-merge#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/3b3f4aeacf600fd3910f1c3d513c0636.png",
+            "gamename": "Stick Merge",
+            "gamedes": "Who Is? is a puzzle game created by Unico Studio. This is a fun riddle game that presents you with over a hundred tricky scenarios and you have to think outside the box to solve them."
+        }
+    ],
+    "newgame": [
+        {
+            "id": "0",
+            "gameurl": "https://poki.com/en/g/subway-surfers#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/584bae3da91feb104678e9c2a78d47c3.jpeg",
+            "gamename": "Subway Surfers",
+            "gamedes": "Subway Surfers is a classic endless runner game. You play as Jake, who surfs the subways and tries to escape from the grumpy Inspector and his dog."
+        },
+        {
+            "id": "1",
+            "gameurl": "https://poki.com/en/g/merge-arena?#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/28b1a724027f7fd76a8fcced2c89a51e.png",
+            "gamename": "Merge Arena",
+            "gamedes": "Merge Arena is a 3D tower defense game about defending your territory from various different types of enemies while constantly improving your army."
+        },
+        {
+            "id": "2",
+            "gameurl": "https://poki.com/en/g/merge-arena?#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/a8e38af649693531e20fcd0ace566c73.png",
+            "gamename": "It's Story Time!",
+            "gamedes": "It's Story Time is a puzzle game created by Sakkat Studio. Do you want to put your brainpower to the test? "
+        },
+        {
+            "id": "3",
+            "gameurl": "https://poki.com/en/g/emoji-sort-master#fullscreen",
+            "gameimage": "https://play-lh.googleusercontent.com/Oxk1GgJswzqEc9CZxJozFH02FN8y96zfj6Hk6IIlxNutyde4YsfLvG_Ig6MjmY0esGVj",
+            "gamename": "Emoji Sort Master",
+            "gamedes": "Emoji Sort Master is a sorting-puzzle game in which your objective is to sort emojis by mixing them together."
+        },
+        {
+            "id": "4",
+            "gameurl": "https://poki.com/en/g/tribals-io#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/0e49f86ec1509ef756fadeefa0ce917c.png",
+            "gamename": "Tribals",
+            "gamedes": "Tribals.io is a multiplayer survival game where you craft, mine, build and explore an island trying to survive."
+        },
+        {
+            "id": "5",
+            "gameurl": "https://poki.com/en/g/emoji-sort-master#fullscreen",
+            "gameimage": "https://play-lh.googleusercontent.com/Oxk1GgJswzqEc9CZxJozFH02FN8y96zfj6Hk6IIlxNutyde4YsfLvG_Ig6MjmY0esGVj",
+            "gamename": "Emoji Sort Master",
+            "gamedes": "Emoji Sort Master is a sorting-puzzle game in which your objective is to sort emojis by mixing them together."
+        },
+        {
+            "id": "6",
+            "gameurl": "https://poki.com/en/g/onet-master#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/db6315053336a87ed71553a3a18120d4.png",
+            "gamename": "Onet Master",
+            "gamedes": "Onet Master is the sequel to the popular puzzle game Onet Paradise. Find two identical tiles and connect them with three or less straight lines!"
+        },
+        {
+            "id": "7",
+            "gameurl": "https://poki.com/en/g/drive-mad#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/f8a2160e52333ee0d44ec19e8ca65139.png",
+            "gamename": "Drive Mad",
+            "gamedes": "Drive Mad is a car game where you drive on a track filled with obstacles. Your aim is to reach the finish line in one piece."
+        },
+        {
+            "id": "8",
+            "gameurl": "https://poki.com/en/g/game-of-farmers#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/b30b92f7ef56451792c76d014402406a.png",
+            "gamename": "Game of Farmers",
+            "gamedes": "Game of Farmers is a casual idle farming game created by AppyApp. Leave the chaotic city life behind and start building your dream farm."
+        },
+        {
+            "id": "9",
+            "gameurl": "https://poki.com/en/g/temple-run-2-holi-festival",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/b897d1356f5270be2ba5a3f392aaa4d1.png",
+            "gamename": "Temple Run 2: Holi Festival",
+            "gamedes": "Temple Run 2: Holi Festival is an endless runner game developed by Imangi. Celebrate the Holi Festival in the reimagined colorful temples in Temple Run 2"
+        }
+    ],
+    "toprating": [
+        {
+            "id": "0",
+            "gameurl": "https://poki.com/en/g/temple-run-2-holi-festival#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/b897d1356f5270be2ba5a3f392aaa4d1.png",
+            "gamename": "Temple Run 2: Holi Festival",
+            "gamedes": "Temple Run 2: Holi Festival is an endless runner game developed by Imangi. Celebrate the Holi Festival in the reimagined colorful temples in Temple Run 2"
+        },
+        {
+            "id": "1",
+            "gameurl": "https://poki.com/en/g/soccer-skills-world-cup#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/1a9642e779cab413962255ea953d1155.png",
+            "gamename": "Soccer Skills World Cup",
+            "gamedes": "Drag your finger our mouse towards the direction you want to move. When you let go, you will kick the ball. The intensity of your drag will affect your speed as well as your power."
+        },
+        {
+            "id": "2",
+            "gameurl": "https://poki.com/en/g/duo-survival#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/874d68cb26daf46ff1ad69e3467edf33.png",
+            "gamename": "Duo Survival",
+            "gamedes": "Duo Survival is a 2-player cooperative game by 7Spot Games where you help two apocalypse survivors escape from the zombies through obstacle-filled levels."
+        },
+        {
+            "id": "3",
+            "gameurl": "https://poki.com/en/g/stickman-hook#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/99e090d154caf30f3625df7e456d5984.png",
+            "gamename": "Stickman Hook",
+            "gamedes": "Stickman Hook is a skill game where you play as a swinging stickman through hundreds of challenging levels. "
+        },
+        {
+            "id": "4",
+            "gameurl": "https://poki.com/en/g/blockpost#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/d012d72ef238513d8ddd5cc77e6b612a.png",
+            "gamename": "Blockpost",
+            "gamedes": "Blockpost is a 3D first person shooting game created by Skullcap Studios. In this procedural cubic 3D-shooter."
+        },
+        {
+            "id": "5",
+            "gameurl": "https://poki.com/en/g/football-legends#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/7336e7ac04f8c0a88fac674d112ad77c.png",
+            "gamename": "Football Legends",
+            "gamedes": "Football Legends is a sports game created by MadPuffers."
+        },
+        {
+            "id": "6",
+            "gameurl": "https://poki.com/en/g/little-master-cricket#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/e59cb3dd8207039fa03a8745c4917e18.png",
+            "gamename": "Little Master Cricket",
+            "gamedes": "Little Master Cricket is a sports game where you exercise your batting skills. Featuring a ragdoll physics engine and a unique control scheme to put you in direct control of the bat."
+        },
+        {
+            "id": "7",
+            "gameurl": "https://poki.com/en/g/cricket-world-cup#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/a9d84b22bc87dc97bcd8ca7a60893404.png",
+            "gamename": "Cricket World Cup",
+            "gamedes": "Cricket World Cup is a cool cricket sports game where you compete for the World Cup."
+        },
+        {
+            "id": "8",
+            "gameurl": "https://poki.com/en/g/master-chess#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=204,height=204,fit=cover,f=auto/505695b9-1b21-47fd-a8e1-93345afb57de.png",
+            "gamename": "Master Chess",
+            "gamedes": "Master Chess is a board and thinking game that you can play online locally."
+        }
+    ],
+    "topcharting": [
+        {
+            "id": "0",
+            "gameurl": "https://poki.com/en/g/subway-surfers#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/584bae3da91feb104678e9c2a78d47c3.jpeg",
+            "gamename": "Subway Surfers",
+            "gamedes": "Subway Surfers is a classic endless runner game. You play as Jake, who surfs the subways and tries to escape from the grumpy Inspector and his dog."
+        },
+        {
+            "id": "1",
+            "gameurl": "https://poki.com/en/g/slime-laboratory-2#fullscreen",
+            "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/58ad1066794ccb9a97500e4a9aef246e.png",
+            "gamename": "Slime Laboratory 2",
+            "gamedes": "Slime Laboratory 2 is a is the sequel to the physics-based platform game where you embark on a slimy journey through a mysterious laboratory. "
+        }
+    ],
+    "category": [
+        {
+            "id": "0",
+            "name": "Action",
+            "icon": "",
+            "gameList": [
+                {
+                    "id": "0",
+                    "gameurl": "https://poki.com/en/g/subway-surfers#fullscreen",
+                    "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/584bae3da91feb104678e9c2a78d47c3.jpeg",
+                    "gamename": "Subway Surfers",
+                    "gamedes": "Subway Surfers is a classic endless runner game. You play as Jake, who surfs the subways and tries to escape from the grumpy Inspector and his dog."
+                }
+            ]
+        },
+        {
+            "id": "1",
+            "name": "Racing",
+            "icon": "",
+            "gameList": [
+                {
+                    "id": "0",
+                    "gameurl": "https://poki.com/en/g/subway-surfers#fullscreen",
+                    "gameimage": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/584bae3da91feb104678e9c2a78d47c3.jpeg",
+                    "gamename": "Subway Surfers",
+                    "gamedes": "Subway Surfers is a classic endless runner game. You play as Jake, who surfs the subways and tries to escape from the grumpy Inspector and his dog."
+                }
+            ]
+        }
+    ]
+}
