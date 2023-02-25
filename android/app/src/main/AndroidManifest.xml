@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.all_in_one_game_2023">
+   <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="All In One Game 2023"
         android:name="${applicationName}"

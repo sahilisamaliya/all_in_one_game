@@ -27,7 +27,7 @@ class AppPreference {
     return _preferences.getInt(key);
   }
 
-  String getString(String key, {String defValue = ''}) {
+  String getString(String key, {String defValue = '1'}) {
     return _preferences.getString(key) != null
         ? (_preferences.getString(key) ?? '')
         : defValue;

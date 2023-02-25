@@ -1,4 +1,4 @@
-import 'package:all_in_one_game/game_model.dart';
+import 'package:all_in_one_game/ad_manager.dart';
 import 'package:all_in_one_game/internet_connection/connection_manager_controller.dart';
 import 'package:all_in_one_game/internet_connection/no_internet_screen.dart';
 import 'package:all_in_one_game/screens/game_play.dart';
@@ -9,17 +9,24 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SelectedGameScreen extends StatefulWidget {
-  const SelectedGameScreen(
-      {super.key, required this.game, required this.index});
+  SelectedGameScreen({super.key, required this.game});
 
-  final List? game;
-  final int index;
+  var game;
+
   @override
   State<SelectedGameScreen> createState() => _SelectedGameScreenState();
 }
 
 class _SelectedGameScreenState extends State<SelectedGameScreen> {
   final cnt = Get.put(ConnectionManagerController());
+  final ads = Get.put(AdManager());
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    ads.showInterAd();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,8 +39,7 @@ class _SelectedGameScreenState extends State<SelectedGameScreen> {
                     const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
                 child: GestureDetector(
                   onTap: () {
-                    Get.to(() => GamePlayScreen(
-                        gameUrl: widget.game?[widget.index].gameurl));
+                    Get.to(() => GamePlayScreen(gameUrl: widget.game.gameurl));
                   },
                   child: Container(
                     height: 45,
@@ -51,7 +57,7 @@ class _SelectedGameScreenState extends State<SelectedGameScreen> {
               appBar: AppBar(
                 elevation: 0,
                 backgroundColor: ColorUtils.primaryColor,
-                title: Text('${widget.game?[widget.index].gamename}'),
+                title: Text('${widget.game.gamename}'),
               ),
               body: Center(
                 child: SingleChildScrollView(
@@ -67,22 +73,23 @@ class _SelectedGameScreenState extends State<SelectedGameScreen> {
                             borderRadius: BorderRadius.circular(25),
                             image: DecorationImage(
                                 image: CachedNetworkImageProvider(
-                                    '${widget.game?[widget.index].gameimage}'),
+                                    '${widget.game.gameimage}'),
                                 fit: BoxFit.cover)),
                       ),
                       const SizedBox(height: 20),
                       CustomText(
-                        text: "${widget.game?[widget.index].gamename}",
+                        text: "${widget.game.gamename}",
                         fontWeight: FontWeight.bold,
                         size: 25,
                       ),
                       const SizedBox(height: 20),
                       CustomText(
-                        text: "${widget.game?[widget.index].gamedes}",
+                        text: "${widget.game.gamedes}",
                         size: 17,
                         color: ColorUtils.lightTextColor,
                         textAlign: TextAlign.center,
                       ),
+                      ads.showMrec
                     ],
                   ),
                 ),

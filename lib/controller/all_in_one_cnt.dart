@@ -13,7 +13,7 @@ class AllInOneCnt extends GetxController {
   GameModel? gameModel;
   String basicUrl = 'https://drive.google.com/uc?export=view&id=';
 
-  Future<void> getGameData() async {
+  Future<List<Topcharting>?> getGameData() async {
     try {
       isLoading.value = true;
       noInternet.value = false;
@@ -33,10 +33,13 @@ class AllInOneCnt extends GetxController {
         }
       }
       isLoading.value = false;
+
+
     } catch (e) {
       isLoading.value = false;
       noInternet.value = true;
     }
     isLoading.value = false;
+    return gameModel?.topcharting ?? [];
   }
 }

@@ -1,6 +1,7 @@
 import 'package:all_in_one_game/controller/all_in_one_cnt.dart';
 import 'package:all_in_one_game/internet_connection/connection_manager_controller.dart';
 import 'package:all_in_one_game/internet_connection/no_internet_screen.dart';
+import 'package:all_in_one_game/screens/game_play.dart';
 import 'package:all_in_one_game/screens/see_all_screen.dart';
 import 'package:all_in_one_game/screens/selected_game_screen.dart';
 import 'package:all_in_one_game/utils/colors.dart';
@@ -49,7 +50,7 @@ class _ForYouScreenState extends State<ForYouScreen> {
                       initialPage: 0,
                       enableInfiniteScroll: true,
                       reverse: false,
-                      // autoPlay: true,
+                      autoPlay: true,
                       // autoPlayInterval: const Duration(seconds: 3),
                       // autoPlayAnimationDuration: const Duration(milliseconds: 1000),
                       autoPlayCurve: Curves.fastOutSlowIn,
@@ -69,40 +70,44 @@ class _ForYouScreenState extends State<ForYouScreen> {
                                       image: CachedNetworkImageProvider(
                                           '${i.gameimage}')),
                                   borderRadius: BorderRadius.circular(25)),
-                              child: Stack(
-                                children: [
-                                  Container(
-                                    width: MediaQuery.of(context).size.width,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(25),
-                                      gradient: LinearGradient(
-                                          begin: Alignment.centerLeft,
-                                          end: Alignment.centerRight,
-                                          colors: [
-                                            ColorUtils.blackColor
-                                                .withOpacity(0.8),
-                                            Colors.transparent
-                                          ],
-                                          stops: const [
-                                            0.0,
-                                            0.40
-                                          ]),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 20, bottom: 20),
-                                    child: Align(
-                                      alignment: Alignment.bottomLeft,
-                                      child: CustomText(
-                                        text: "${i.gamename}",
-                                        textAlign: TextAlign.start,
-                                        size: 20,
-                                        fontWeight: FontWeight.w500,
+                              child: InkWell(
+                                onTap: () => Get.to(() =>
+                                    SelectedGameScreen(game: i),transition: Transition.rightToLeft),
+                                child: Stack(
+                                  children: [
+                                    Container(
+                                      width: MediaQuery.of(context).size.width,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(25),
+                                        gradient: LinearGradient(
+                                            begin: Alignment.centerLeft,
+                                            end: Alignment.centerRight,
+                                            colors: [
+                                              ColorUtils.blackColor
+                                                  .withOpacity(0.8),
+                                              Colors.transparent
+                                            ],
+                                            stops: const [
+                                              0.0,
+                                              0.40
+                                            ]),
                                       ),
                                     ),
-                                  ),
-                                ],
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 20, bottom: 20),
+                                      child: Align(
+                                        alignment: Alignment.bottomLeft,
+                                        child: CustomText(
+                                          text: "${i.gamename}",
+                                          textAlign: TextAlign.start,
+                                          size: 20,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ));
                         },
                       );
@@ -145,8 +150,7 @@ class _ForYouScreenState extends State<ForYouScreen> {
                           text:
                               "${controller.gameModel?.suggested?[index].gamename}",
                           onTap: () => Get.to(() => SelectedGameScreen(
-                                game: controller.gameModel?.suggested,
-                                index: index,
+                                game: controller.gameModel?.suggested?[index],
                               )),
                         );
                       },
@@ -189,8 +193,7 @@ class _ForYouScreenState extends State<ForYouScreen> {
                           text:
                               "${controller.gameModel?.newgame?[index].gamename}",
                           onTap: () => Get.to(() => SelectedGameScreen(
-                                game: controller.gameModel?.newgame,
-                                index: index,
+                                game: controller.gameModel?.newgame?[index],
                               )),
                         );
                       },
@@ -233,8 +236,7 @@ class _ForYouScreenState extends State<ForYouScreen> {
                           text:
                               "${controller.gameModel?.toprating?[index].gamename}",
                           onTap: () => Get.to(() => SelectedGameScreen(
-                                game: controller.gameModel?.toprating,
-                                index: index,
+                                game: controller.gameModel?.toprating?[index],
                               )),
                         );
                       },

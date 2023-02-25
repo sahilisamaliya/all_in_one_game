@@ -54,7 +54,7 @@ class _GamePlayScreenState extends State<GamePlayScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body:  isLoading
-                ? const Center(child: CircularProgressIndicator())
+                ? const Center(child: CircularProgressIndicator(color: ColorUtils.buttonColor))
                 : WebViewWidget(controller: controller),
     
     );

@@ -45,7 +45,7 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
                       return GestureDetector(
                         onTap: () => Get.to(
                             () => SelectedGameScreen(
-                                game: widget.category?.gameList, index: index),
+                                game: widget.category?.gameList?[index],),
                             transition: Transition.rightToLeft),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,

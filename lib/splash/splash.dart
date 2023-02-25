@@ -1,3 +1,4 @@
+import 'package:all_in_one_game/ad_manager.dart';
 import 'package:all_in_one_game/controller/all_in_one_cnt.dart';
 import 'package:all_in_one_game/internet_connection/no_internet_screen.dart';
 import 'package:all_in_one_game/tab_bar/tabBarScreen.dart';
@@ -15,6 +16,7 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
+  final ads = Get.put(AdManager());
   final controller = Get.put(AllInOneCnt());
 
   @override
@@ -26,7 +28,6 @@ class _SplashPageState extends State<SplashPage> {
 
   Future<void> init() async {
     await controller.getGameData();
-    // adsData = await context.read<AdCubit>().getAdData();
   }
 
   @override
@@ -46,9 +47,8 @@ class _SplashPageState extends State<SplashPage> {
                           Container(
                             height: 150,
                             width: 150,
-
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(7),
+                                borderRadius: BorderRadius.circular(7),
                                 image: const DecorationImage(
                                     image: AssetImage(
                                         'assets/images/playstore.png'))),

@@ -1,8 +1,10 @@
+import 'package:all_in_one_game/ad_manager.dart';
 import 'package:all_in_one_game/screens/category.dart';
 import 'package:all_in_one_game/screens/for_you_screen.dart';
 import 'package:all_in_one_game/screens/top_charts.dart';
 import 'package:all_in_one_game/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class TabBarPage extends StatefulWidget {
   const TabBarPage({super.key});
@@ -13,6 +15,8 @@ class TabBarPage extends StatefulWidget {
 
 class _MyAppState extends State<TabBarPage> with TickerProviderStateMixin {
   TabController? _controller;
+  final ads = Get.put(AdManager());
+
   final List<Tab> topTabs = <Tab>[
     const Tab(text: 'For You'),
     const Tab(text: 'Top Charts'),
@@ -36,6 +40,7 @@ class _MyAppState extends State<TabBarPage> with TickerProviderStateMixin {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
+        bottomNavigationBar: ads.banner,
         appBar: AppBar(
           elevation: 0,
           backgroundColor: ColorUtils.primaryColor,

@@ -44,7 +44,7 @@ class _SeeAllScreenState extends State<SeeAllScreen> {
                     itemCount: widget.allGame?.length,
                     itemBuilder: (BuildContext ctx, index) {
                       return GestureDetector(
-                        onTap: () => Get.to(()=> SelectedGameScreen(game: widget.allGame, index: index)),
+                        onTap: () => Get.to(()=> SelectedGameScreen(game: widget.allGame?[index])),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [

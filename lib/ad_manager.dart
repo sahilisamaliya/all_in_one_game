@@ -1,6 +1,6 @@
 import 'dart:math';
+import 'package:all_in_one_game/utils/preferences/preference_manager.dart';
 import 'package:applovin_max/applovin_max.dart';
-import 'package:board_exam_paper/preference_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -14,7 +14,8 @@ class AdManager extends GetxController with WidgetsBindingObserver {
   void onInit() {
     super.onInit();
 
-    if (AppPreference().getBool("sdk")) {
+    print("AppPreference().getBool ${AppPreference().getBool("sdk")}");
+    // if (AppPreference().getBool("sdk")) {
       print("open ads called");
       AppLovinMAX.setAppOpenAdListener(AppOpenAdListener(
         onAdLoadedCallback: (ad) {
@@ -33,8 +34,8 @@ class AdManager extends GetxController with WidgetsBindingObserver {
       ));
 
       AppLovinMAX.loadAppOpenAd(openAdId);
-    }
-
+    // }
+    loadInterAd();
     WidgetsBinding.instance.addObserver(this);
   }
 
@@ -70,60 +71,10 @@ class AdManager extends GetxController with WidgetsBindingObserver {
     }
   }
 
-  // String? adUnitId;
-
-  // //
-  // AdManager({
-  //   this.adUnitId,
-  // });
-
-  //
-  // @override
-  // void onInit() {
-  //   FlutterApplovinMax.initRewardAd("6a7db616415020ae");
-  //   FlutterApplovinMax.initInterstitialAd('$adUnitId');
-  //   super.onInit();
-  // }
-  //
-  //
-  // void listener(AppLovinAdListener? event) {
-  //   if (event == AppLovinAdListener.onUserRewarded) {
-  //     print('👍get reward');
-  //   }
-  // }
-  //
-  // Future showRewarded() async {
-  //   // isRewardedVideoAvailable =
-  //   //     await FlutterApplovinMax.isRewardLoaded(listener);
-  //   // if (isRewardedVideoAvailable ?? false) {
-  //   //   await FlutterApplovinMax.showRewardVideo(listener);
-  //   // }
-  // }
-  //
-  // void showInterAd(bool? flag) async {
-  //   if (flag ?? true) {
-  //     String index = AppPreference().getString("addLimit");
-  //
-  //     if (int.parse(index) == addLimit) {
-  //       isInterstitialVideoAvailable =
-  //           (await FlutterApplovinMax.isInterstitialLoaded(listener))!;
-  //       if (isInterstitialVideoAvailable) {
-  //         FlutterApplovinMax.showInterstitialVideo(
-  //             (AppLovinAdListener? event) => listener(event));
-  //       }
-  //
-  //       AppPreference().setString("addLimit", "1");
-  //     } else {
-  //       int i = int.parse(index);
-  //       i++;
-  //       AppPreference().setString("addLimit", i.toString());
-  //     }
-  //   }
-  // }
-
-  showMrecAd() {
-    return MaxAdView(
-      adUnitId: "dd0099f3f8ede4b2",
+  // showMrecAd() {
+  Widget showMrec = Center(
+    child: MaxAdView(
+      adUnitId: "906e1e4a319a2008",
       adFormat: AdFormat.mrec,
       listener: AdViewAdListener(
         onAdLoadedCallback: (ad) {
@@ -137,17 +88,19 @@ class AdManager extends GetxController with WidgetsBindingObserver {
         onAdExpandedCallback: (ad) {},
         onAdCollapsedCallback: (ad) {},
       ),
-    );
-    // return MaxAdView(
-    //     adUnitId: "dd0099f3f8ede4b2",
-    //     adFormat: AdFormat.mrec,
-    //     listener: AdViewAdListener(
-    //         onAdLoadedCallback: (ad) {},
-    //         onAdLoadFailedCallback: (adUnitId, error) {},
-    //         onAdClickedCallback: (ad) {},
-    //         onAdExpandedCallback: (ad) {},
-    //         onAdCollapsedCallback: (ad) {}));
-  }
+    ),
+  );
+  // }
+  Widget banner = MaxAdView(
+      adUnitId: "98e2f1bd281dc453",
+      adFormat: AdFormat.banner,
+      listener: AdViewAdListener(
+          onAdLoadedCallback: (ad) {},
+          onAdLoadFailedCallback: (adUnitId, error) {},
+          onAdClickedCallback: (ad) {},
+          onAdExpandedCallback: (ad) {},
+          onAdCollapsedCallback: (ad) {}));
+
 
   void loadInterAd() {
     AppLovinMAX.setInterstitialListener(InterstitialListener(
@@ -172,7 +125,7 @@ class AdManager extends GetxController with WidgetsBindingObserver {
       onAdHiddenCallback: (ad) {},
     ));
 
-    AppLovinMAX.loadInterstitial('e6f7f8dcc9d18078');
+    AppLovinMAX.loadInterstitial('e6d975d8a21f7bd5');
   }
 
   void showInterAd() async {
@@ -181,15 +134,15 @@ class AdManager extends GetxController with WidgetsBindingObserver {
 
     if (int.parse(index) == 3) {
       isInterstitialVideoAvailable =
-          (await AppLovinMAX.isInterstitialReady("e6f7f8dcc9d18078"))!;
+          (await AppLovinMAX.isInterstitialReady("e6d975d8a21f7bd5"))!;
 
       if (isInterstitialVideoAvailable) {
-        AppLovinMAX.showInterstitial("e6f7f8dcc9d18078");
+        AppLovinMAX.showInterstitial("e6d975d8a21f7bd5");
       } else {
-        AppLovinMAX.loadInterstitial("e6f7f8dcc9d18078");
+        AppLovinMAX.loadInterstitial("e6d975d8a21f7bd5");
         Future.delayed(
           const Duration(seconds: 2),
-          () => AppLovinMAX.showInterstitial("e6f7f8dcc9d18078"),
+          () => AppLovinMAX.showInterstitial("e6d975d8a21f7bd5"),
         );
       }
 
@@ -202,6 +155,4 @@ class AdManager extends GetxController with WidgetsBindingObserver {
   }
 }
 
-// }
-
-String openAdId = "9d5b7665e5c4b797";
+String openAdId = "bb7efb72e6ad7780";

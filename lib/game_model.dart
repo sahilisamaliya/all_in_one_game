@@ -157,6 +157,7 @@ class Topcharting {
     this.gameimage,
     this.gamename,
     this.gamedes,
+    this.isNativeAd,
   });
 
   Topcharting.fromJson(dynamic json) {
@@ -165,12 +166,14 @@ class Topcharting {
     gameimage = json['gameimage'];
     gamename = json['gamename'];
     gamedes = json['gamedes'];
+    isNativeAd = json['isNativeAd'] ?? false;
   }
   String? id;
   String? gameurl;
   String? gameimage;
   String? gamename;
   String? gamedes;
+  bool? isNativeAd;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
@@ -179,6 +182,7 @@ class Topcharting {
     map['gameimage'] = gameimage;
     map['gamename'] = gamename;
     map['gamedes'] = gamedes;
+    map['isNativeAd'] = isNativeAd;
     return map;
   }
 }
