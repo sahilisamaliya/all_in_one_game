@@ -124,6 +124,7 @@ class GameList {
     this.gameimage,
     this.gamename,
     this.gamedes,
+    this.isNativeAd,
   });
 
   GameList.fromJson(dynamic json) {
@@ -132,12 +133,14 @@ class GameList {
     gameimage = json['gameimage'];
     gamename = json['gamename'];
     gamedes = json['gamedes'];
+    isNativeAd = json['isNativeAd'] ?? false;
   }
   String? id;
   String? gameurl;
   String? gameimage;
   String? gamename;
   String? gamedes;
+  bool? isNativeAd;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
@@ -146,6 +149,7 @@ class GameList {
     map['gameimage'] = gameimage;
     map['gamename'] = gamename;
     map['gamedes'] = gamedes;
+    map['isNativeAd'] = isNativeAd;
     return map;
   }
 }

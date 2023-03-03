@@ -16,24 +16,24 @@ class AdManager extends GetxController with WidgetsBindingObserver {
 
     print("AppPreference().getBool ${AppPreference().getBool("sdk")}");
     // if (AppPreference().getBool("sdk")) {
-      print("open ads called");
-      AppLovinMAX.setAppOpenAdListener(AppOpenAdListener(
-        onAdLoadedCallback: (ad) {
-          print('Open add loaded');
-        },
-        onAdLoadFailedCallback: (adUnitId, error) {},
-        onAdDisplayedCallback: (ad) {},
-        onAdDisplayFailedCallback: (ad, error) {
-          AppLovinMAX.loadAppOpenAd(openAdId);
-        },
-        onAdClickedCallback: (ad) {},
-        onAdHiddenCallback: (ad) {
-          AppLovinMAX.loadAppOpenAd(openAdId);
-        },
-        onAdRevenuePaidCallback: (ad) {},
-      ));
+    print("open ads called");
+    AppLovinMAX.setAppOpenAdListener(AppOpenAdListener(
+      onAdLoadedCallback: (ad) {
+        print('Open add loaded');
+      },
+      onAdLoadFailedCallback: (adUnitId, error) {},
+      onAdDisplayedCallback: (ad) {},
+      onAdDisplayFailedCallback: (ad, error) {
+        AppLovinMAX.loadAppOpenAd(openAdId);
+      },
+      onAdClickedCallback: (ad) {},
+      onAdHiddenCallback: (ad) {
+        AppLovinMAX.loadAppOpenAd(openAdId);
+      },
+      onAdRevenuePaidCallback: (ad) {},
+    ));
 
-      AppLovinMAX.loadAppOpenAd(openAdId);
+    AppLovinMAX.loadAppOpenAd(openAdId);
     // }
     loadInterAd();
     WidgetsBinding.instance.addObserver(this);
@@ -77,13 +77,8 @@ class AdManager extends GetxController with WidgetsBindingObserver {
       adUnitId: "906e1e4a319a2008",
       adFormat: AdFormat.mrec,
       listener: AdViewAdListener(
-        onAdLoadedCallback: (ad) {
-          print("Failed add$ad");
-        },
-        onAdLoadFailedCallback: (adUnitId, error) {
-          print("Failed add$error");
-          print("Error aavi 6 $error");
-        },
+        onAdLoadedCallback: (ad) {},
+        onAdLoadFailedCallback: (adUnitId, error) {},
         onAdClickedCallback: (ad) {},
         onAdExpandedCallback: (ad) {},
         onAdCollapsedCallback: (ad) {},
@@ -101,11 +96,9 @@ class AdManager extends GetxController with WidgetsBindingObserver {
           onAdExpandedCallback: (ad) {},
           onAdCollapsedCallback: (ad) {}));
 
-
   void loadInterAd() {
     AppLovinMAX.setInterstitialListener(InterstitialListener(
       onAdLoadedCallback: (ad) {
-        print('Interstitial ad loaded from ${ad.networkName}');
         interstitialRetryAttempt = 0;
       },
       onAdLoadFailedCallback: (adUnitId, error) {
@@ -113,16 +106,15 @@ class AdManager extends GetxController with WidgetsBindingObserver {
 
         int retryDelay = pow(2, min(6, interstitialRetryAttempt)).toInt();
 
-        print(
-            'Interstitial ad failed to load with code ${error.code} - retrying in ${retryDelay}s');
-
         Future.delayed(Duration(milliseconds: retryDelay * 1000), () {});
         AppLovinMAX.loadInterstitial(adUnitId);
       },
       onAdDisplayedCallback: (ad) {},
       onAdDisplayFailedCallback: (ad, error) {},
       onAdClickedCallback: (ad) {},
-      onAdHiddenCallback: (ad) {},
+      onAdHiddenCallback: (ad) {
+        loadInterAd();
+      },
     ));
 
     AppLovinMAX.loadInterstitial('e6d975d8a21f7bd5');
@@ -132,7 +124,8 @@ class AdManager extends GetxController with WidgetsBindingObserver {
     // if (flag!) {
     String index = AppPreference().getString("addLimit");
 
-    if (int.parse(index) == 3) {
+    print("index-index $index");
+    if (int.parse(index) == 2) {
       isInterstitialVideoAvailable =
           (await AppLovinMAX.isInterstitialReady("e6d975d8a21f7bd5"))!;
 

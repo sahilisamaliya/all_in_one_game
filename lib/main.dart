@@ -10,8 +10,7 @@ import 'package:get/get.dart';
 bool isInitialized = false;
 
 Future<void> main() async {
-  FlutterNativeSplash.preserve(
-      widgetsBinding: WidgetsFlutterBinding.ensureInitialized());
+  FlutterNativeSplash.preserve(widgetsBinding: WidgetsFlutterBinding.ensureInitialized());
   WidgetsFlutterBinding.ensureInitialized();
   await AppPreference().initialAppPreference();
 

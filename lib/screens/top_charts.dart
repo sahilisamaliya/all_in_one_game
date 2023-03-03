@@ -6,7 +6,6 @@ import 'package:all_in_one_game/utils/colors.dart';
 import 'package:all_in_one_game/utils/custom_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 
 class TopChartScreen extends StatefulWidget {
@@ -19,22 +18,23 @@ class TopChartScreen extends StatefulWidget {
 class _TopChartScreenState extends State<TopChartScreen> {
   final controller = Get.put(AllInOneCnt());
   final ads = Get.put(AdManager());
-  List<Topcharting> data = [];
+  List<Topcharting>? data = [];
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    data.clear();
+    data?.clear();
     init();
   }
 
   init() async {
     try {
-      data = (await controller.getGameData())!;
-      for (int i = 0; i < data.length; i++) {
+      await controller.getGameData();
+      data = controller.gameModel?.topcharting;
+      for (int i = 0; i < data!.length; i++) {
         if (i % 3 == 0) {
-          data.insert(
+          data?.insert(
               i,
               Topcharting(
                   id: "",
@@ -45,11 +45,10 @@ class _TopChartScreenState extends State<TopChartScreen> {
                   isNativeAd: true));
         }
       }
-      data.removeAt(0);
+      data?.removeAt(0);
     } catch (e) {
       // TODO
     }
-    data.shuffle();
   }
 
   @override
@@ -65,7 +64,7 @@ class _TopChartScreenState extends State<TopChartScreen> {
                 child: Wrap(
                   spacing: 20,
                   alignment: WrapAlignment.center,
-                  children: data.map((e) {
+                  children: data!.map((e) {
                     return e.isNativeAd == true
                         ? ads.showMrec
                         : Padding(

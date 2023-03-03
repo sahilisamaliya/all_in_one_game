@@ -1,3 +1,4 @@
+import 'package:all_in_one_game/ad_manager.dart';
 import 'package:all_in_one_game/controller/all_in_one_cnt.dart';
 import 'package:all_in_one_game/internet_connection/connection_manager_controller.dart';
 import 'package:all_in_one_game/internet_connection/no_internet_screen.dart';
@@ -21,7 +22,7 @@ class ForYouScreen extends StatefulWidget {
 class _ForYouScreenState extends State<ForYouScreen> {
   final controller = Get.put(AllInOneCnt());
   final cnt = Get.put(ConnectionManagerController());
-
+  final ads = Get.put(AdManager());
   @override
   void initState() {
     // TODO: implement initState
@@ -71,8 +72,9 @@ class _ForYouScreenState extends State<ForYouScreen> {
                                           '${i.gameimage}')),
                                   borderRadius: BorderRadius.circular(25)),
                               child: InkWell(
-                                onTap: () => Get.to(() =>
-                                    SelectedGameScreen(game: i),transition: Transition.rightToLeft),
+                                onTap: () => Get.to(
+                                    () => SelectedGameScreen(game: i),
+                                    transition: Transition.rightToLeft),
                                 child: Stack(
                                   children: [
                                     Container(
@@ -113,6 +115,7 @@ class _ForYouScreenState extends State<ForYouScreen> {
                       );
                     }).toList(),
                   ),
+                  ads.banner,
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: Row(

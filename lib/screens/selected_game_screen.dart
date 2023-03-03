@@ -39,6 +39,7 @@ class _SelectedGameScreenState extends State<SelectedGameScreen> {
                     const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
                 child: GestureDetector(
                   onTap: () {
+                    ads.showInterAd();
                     Get.to(() => GamePlayScreen(gameUrl: widget.game.gameurl));
                   },
                   child: Container(

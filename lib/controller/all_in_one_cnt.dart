@@ -8,12 +8,13 @@ import 'package:get/get.dart';
 
 class AllInOneCnt extends GetxController {
   Dio dio = Dio();
+  
   RxBool noInternet = false.obs;
   RxBool isLoading = false.obs;
   GameModel? gameModel;
   String basicUrl = 'https://drive.google.com/uc?export=view&id=';
 
-  Future<List<Topcharting>?> getGameData() async {
+  Future<GameModel?> getGameData() async {
     try {
       isLoading.value = true;
       noInternet.value = false;
@@ -33,13 +34,11 @@ class AllInOneCnt extends GetxController {
         }
       }
       isLoading.value = false;
-
-
     } catch (e) {
       isLoading.value = false;
       noInternet.value = true;
     }
     isLoading.value = false;
-    return gameModel?.topcharting ?? [];
+    return gameModel;
   }
 }
