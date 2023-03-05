@@ -1,6 +1,6 @@
-import 'package:all_in_one_game/ad_manager.dart';
+import 'package:all_in_one_game/ad_manager/ad_manager.dart';
 import 'package:all_in_one_game/controller/all_in_one_cnt.dart';
-import 'package:all_in_one_game/game_model.dart';
+import 'package:all_in_one_game/model/game_model.dart';
 import 'package:all_in_one_game/screens/selected_game_screen.dart';
 import 'package:all_in_one_game/utils/colors.dart';
 import 'package:all_in_one_game/utils/custom_text.dart';
@@ -32,8 +32,9 @@ class _TopChartScreenState extends State<TopChartScreen> {
     try {
       await controller.getGameData();
       data = controller.gameModel?.topcharting;
+      data?.shuffle();
       for (int i = 0; i < data!.length; i++) {
-        if (i % 3 == 0) {
+        if (i % adsModel.data!.topChartLength! == 0) {
           data?.insert(
               i,
               Topcharting(

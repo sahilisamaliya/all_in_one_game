@@ -1,10 +1,6 @@
-import 'package:all_in_one_game/ad_manager.dart';
 import 'package:all_in_one_game/controller/all_in_one_cnt.dart';
 import 'package:all_in_one_game/internet_connection/no_internet_screen.dart';
-import 'package:all_in_one_game/tab_bar/tabBarScreen.dart';
-import 'package:all_in_one_game/intro_screen/intro.dart';
 import 'package:all_in_one_game/utils/custom_text.dart';
-import 'package:all_in_one_game/utils/preferences/preference_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,7 +12,6 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
-  final ads = Get.put(AdManager());
   final controller = Get.put(AllInOneCnt());
 
   @override

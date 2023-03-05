@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:all_in_one_game/controller/all_in_one_cnt.dart';
 import 'package:all_in_one_game/utils/preferences/preference_manager.dart';
 import 'package:applovin_max/applovin_max.dart';
 import 'package:flutter/material.dart';
@@ -9,14 +10,10 @@ int addLimit = 0;
 class AdManager extends GetxController with WidgetsBindingObserver {
   var interstitialRetryAttempt = 0;
   bool isInterstitialVideoAvailable = false;
-
   @override
   void onInit() {
     super.onInit();
 
-    print("AppPreference().getBool ${AppPreference().getBool("sdk")}");
-    // if (AppPreference().getBool("sdk")) {
-    print("open ads called");
     AppLovinMAX.setAppOpenAdListener(AppOpenAdListener(
       onAdLoadedCallback: (ad) {
         print('Open add loaded');
@@ -34,7 +31,6 @@ class AdManager extends GetxController with WidgetsBindingObserver {
     ));
 
     AppLovinMAX.loadAppOpenAd(openAdId);
-    // }
     loadInterAd();
     WidgetsBinding.instance.addObserver(this);
   }
@@ -74,7 +70,7 @@ class AdManager extends GetxController with WidgetsBindingObserver {
   // showMrecAd() {
   Widget showMrec = Center(
     child: MaxAdView(
-      adUnitId: "906e1e4a319a2008",
+      adUnitId: "${adsModel.data?.mrecAdId}",
       adFormat: AdFormat.mrec,
       listener: AdViewAdListener(
         onAdLoadedCallback: (ad) {},
@@ -87,7 +83,7 @@ class AdManager extends GetxController with WidgetsBindingObserver {
   );
   // }
   Widget banner = MaxAdView(
-      adUnitId: "98e2f1bd281dc453",
+      adUnitId: "${adsModel.data?.bannerAdId}",
       adFormat: AdFormat.banner,
       listener: AdViewAdListener(
           onAdLoadedCallback: (ad) {},
@@ -117,7 +113,7 @@ class AdManager extends GetxController with WidgetsBindingObserver {
       },
     ));
 
-    AppLovinMAX.loadInterstitial('e6d975d8a21f7bd5');
+    AppLovinMAX.loadInterstitial(interAdId);
   }
 
   void showInterAd() async {
@@ -125,17 +121,17 @@ class AdManager extends GetxController with WidgetsBindingObserver {
     String index = AppPreference().getString("addLimit");
 
     print("index-index $index");
-    if (int.parse(index) == 2) {
+    if (index == adsModel.data?.adsClickLimit) {
       isInterstitialVideoAvailable =
-          (await AppLovinMAX.isInterstitialReady("e6d975d8a21f7bd5"))!;
+          (await AppLovinMAX.isInterstitialReady(interAdId))!;
 
       if (isInterstitialVideoAvailable) {
-        AppLovinMAX.showInterstitial("e6d975d8a21f7bd5");
+        AppLovinMAX.showInterstitial(interAdId);
       } else {
-        AppLovinMAX.loadInterstitial("e6d975d8a21f7bd5");
+        AppLovinMAX.loadInterstitial(interAdId);
         Future.delayed(
           const Duration(seconds: 2),
-          () => AppLovinMAX.showInterstitial("e6d975d8a21f7bd5"),
+          () => AppLovinMAX.showInterstitial(interAdId),
         );
       }
 
@@ -148,4 +144,5 @@ class AdManager extends GetxController with WidgetsBindingObserver {
   }
 }
 
-String openAdId = "bb7efb72e6ad7780";
+String openAdId = "${adsModel.data?.openAdId}";
+String interAdId = "${adsModel.data?.interAdId}";

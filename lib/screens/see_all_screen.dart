@@ -1,4 +1,4 @@
-import 'package:all_in_one_game/ad_manager.dart';
+import 'package:all_in_one_game/ad_manager/ad_manager.dart';
 import 'package:all_in_one_game/internet_connection/connection_manager_controller.dart';
 import 'package:all_in_one_game/internet_connection/no_internet_screen.dart';
 import 'package:all_in_one_game/screens/selected_game_screen.dart';

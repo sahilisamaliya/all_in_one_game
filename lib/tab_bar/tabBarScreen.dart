@@ -1,4 +1,4 @@
-import 'package:all_in_one_game/ad_manager.dart';
+import 'package:all_in_one_game/ad_manager/ad_manager.dart';
 import 'package:all_in_one_game/screens/category.dart';
 import 'package:all_in_one_game/screens/for_you_screen.dart';
 import 'package:all_in_one_game/screens/top_charts.dart';

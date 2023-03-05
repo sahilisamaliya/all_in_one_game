@@ -29,6 +29,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                 onTap: () => Get.to(
                     () => CategoryListScreen(
                           category: controller.gameModel?.category?[index],
+                          index: index,
                         ),
                     transition: Transition.rightToLeft),
               );

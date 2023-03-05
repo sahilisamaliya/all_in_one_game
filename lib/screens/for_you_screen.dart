@@ -1,4 +1,4 @@
-import 'package:all_in_one_game/ad_manager.dart';
+import 'package:all_in_one_game/ad_manager/ad_manager.dart';
 import 'package:all_in_one_game/controller/all_in_one_cnt.dart';
 import 'package:all_in_one_game/internet_connection/connection_manager_controller.dart';
 import 'package:all_in_one_game/internet_connection/no_internet_screen.dart';
@@ -124,10 +124,12 @@ class _ForYouScreenState extends State<ForYouScreen> {
                         const CustomText(text: 'Suggested for You', size: 18),
                         InkWell(
                           onTap: () {
-                            Get.to(() => SeeAllScreen(
-                                  allGame: controller.gameModel?.suggested,
-                                  title: "Suggested for You",
-                                ));
+                            Get.to(
+                                () => SeeAllScreen(
+                                      allGame: controller.gameModel?.suggested,
+                                      title: "Suggested for You",
+                                    ),
+                                transition: Transition.rightToLeft);
                           },
                           child: const CustomText(
                             text: 'See All',
@@ -152,9 +154,12 @@ class _ForYouScreenState extends State<ForYouScreen> {
                               "${controller.gameModel?.suggested?[index].gameimage}",
                           text:
                               "${controller.gameModel?.suggested?[index].gamename}",
-                          onTap: () => Get.to(() => SelectedGameScreen(
-                                game: controller.gameModel?.suggested?[index],
-                              )),
+                          onTap: () => Get.to(
+                              () => SelectedGameScreen(
+                                    game:
+                                        controller.gameModel?.suggested?[index],
+                                  ),
+                              transition: Transition.rightToLeft),
                         );
                       },
                     ),
@@ -168,10 +173,12 @@ class _ForYouScreenState extends State<ForYouScreen> {
                         const CustomText(text: 'New Games', size: 18),
                         InkWell(
                           onTap: () {
-                            Get.to(() => SeeAllScreen(
-                                  allGame: controller.gameModel?.newgame,
-                                  title: "New Games",
-                                ));
+                            Get.to(
+                                () => SeeAllScreen(
+                                      allGame: controller.gameModel?.newgame,
+                                      title: "New Games",
+                                    ),
+                                transition: Transition.rightToLeft);
                           },
                           child: const CustomText(
                             text: 'See All',
@@ -195,9 +202,11 @@ class _ForYouScreenState extends State<ForYouScreen> {
                               "${controller.gameModel?.newgame?[index].gameimage}",
                           text:
                               "${controller.gameModel?.newgame?[index].gamename}",
-                          onTap: () => Get.to(() => SelectedGameScreen(
-                                game: controller.gameModel?.newgame?[index],
-                              )),
+                          onTap: () => Get.to(
+                              () => SelectedGameScreen(
+                                    game: controller.gameModel?.newgame?[index],
+                                  ),
+                              transition: Transition.rightToLeft),
                         );
                       },
                     ),
@@ -211,10 +220,12 @@ class _ForYouScreenState extends State<ForYouScreen> {
                         const CustomText(text: 'Top Rated Games', size: 18),
                         InkWell(
                           onTap: () {
-                            Get.to(() => SeeAllScreen(
-                                  allGame: controller.gameModel?.toprating,
-                                  title: "Top Rated Games",
-                                ));
+                            Get.to(
+                                () => SeeAllScreen(
+                                      allGame: controller.gameModel?.toprating,
+                                      title: "Top Rated Games",
+                                    ),
+                                transition: Transition.rightToLeft);
                           },
                           child: const CustomText(
                             text: 'See All',
@@ -238,9 +249,12 @@ class _ForYouScreenState extends State<ForYouScreen> {
                               "${controller.gameModel?.toprating?[index].gameimage}",
                           text:
                               "${controller.gameModel?.toprating?[index].gamename}",
-                          onTap: () => Get.to(() => SelectedGameScreen(
-                                game: controller.gameModel?.toprating?[index],
-                              )),
+                          onTap: () => Get.to(
+                              () => SelectedGameScreen(
+                                    game:
+                                        controller.gameModel?.toprating?[index],
+                                  ),
+                              transition: Transition.rightToLeft),
                         );
                       },
                     ),
